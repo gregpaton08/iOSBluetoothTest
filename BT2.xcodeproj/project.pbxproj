@@ -19,6 +19,7 @@
 		37B7C22316B8437E00C8361C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B7C22216B8437E00C8361C /* ViewController.m */; };
 		37B7C22616B8437E00C8361C /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B7C22416B8437E00C8361C /* ViewController_iPhone.xib */; };
 		37B7C22916B8437E00C8361C /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B7C22716B8437E00C8361C /* ViewController_iPad.xib */; };
+		37B7C23016B8438B00C8361C /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B7C22F16B8438B00C8361C /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		37B7C22216B8437E00C8361C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		37B7C22516B8437E00C8361C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		37B7C22816B8437E00C8361C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		37B7C22F16B8438B00C8361C /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B7C23016B8438B00C8361C /* CoreBluetooth.framework in Frameworks */,
 				37B7C20A16B8437E00C8361C /* UIKit.framework in Frameworks */,
 				37B7C20C16B8437E00C8361C /* Foundation.framework in Frameworks */,
 				37B7C20E16B8437E00C8361C /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +78,7 @@
 		37B7C20816B8437E00C8361C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37B7C22F16B8438B00C8361C /* CoreBluetooth.framework */,
 				37B7C20916B8437E00C8361C /* UIKit.framework */,
 				37B7C20B16B8437E00C8361C /* Foundation.framework */,
 				37B7C20D16B8437E00C8361C /* CoreGraphics.framework */,

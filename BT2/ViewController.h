@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    
+    CBCentralManager *manager;
+    CBPeripheral *peripheral;
+    
+    id delegate;
+    
+    IBOutlet UIButton *bt_connect;
+}
+
+@property (nonatomic, retain) IBOutlet UIButton *connect;
+@property (nonatomic, assign) id delegate;
+
+- (IBAction)connect:(id)sender;
 
 @end

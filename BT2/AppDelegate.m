@@ -23,6 +23,10 @@
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    // allocate and initialize bluetooth manager
+    manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+    
     return YES;
 }
 
@@ -51,6 +55,37 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+/*
+ Request CBCentralManager to scan for peripherals  */
+- (void) startScan
+{
+    [manager scanForPeripheralsWithServices:nil options:nil];
+    //[manager scanForPeripheralsWithServices:[NSArray arrayWithObject:[CBUUID UUIDWithString:@"180A"]] options:nil];
+}
+
+#pragma mark - CBCentralManager delegate methods
+/*
+ Invoked whenever the central manager's state is updated.
+ */
+- (void) centralManagerDidUpdateState:(CBCentralManager *)central
+{
+    if (central.state == CBCentralManagerStatePoweredOn) {
+        NSLog(@"Scanning");
+        [self startScan];
+    }
+    else {
+        NSLog(@"State Change");
+    }
+}
+
+/*
+ Invoked when the central discovers peripherals while scanning.
+ */
+- (void) centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)aPeripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
+{
+    NSLog(@"device found\n");
 }
 
 @end
